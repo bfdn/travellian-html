@@ -1,0 +1,167 @@
+// VARIABLES
+@font-face {
+    font-family: 'PlayfairDisplay-Medium';
+    src: url("../fonts/PlayfairDisplay-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay-Regular';
+    src: url("../fonts/PlayfairDisplay-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay-SemiBold';
+    src: url("../fonts/PlayfairDisplay-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: 'Rubik-Medium';
+    src: url("../fonts/Rubik-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'Rubik-Regular';
+    src: url("../fonts/Rubik-Regular.ttf");
+}
+
+@mixin mq($width: "tablet") {
+
+    @if($width =="small") {
+
+        // Medium devices (tablets, 576px and up)
+        @media (min-width: 576px) {
+            @content
+        }
+    }
+
+    @else if($width =="tablet") {
+
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) {
+            @content
+        }
+    }
+
+    @else if($width =="desktop") {
+
+        // Large devices (desktops, 992px and up)
+        @media (min-width: 992px) {
+            @content
+        }
+    }
+
+    @else if($width =="large") {
+
+        // Extra large devices (large desktops, 1200px and up)
+        @media (min-width: 1200px) {
+            @content
+        }
+    }
+
+    @else if($width =="xlarge") {
+
+        // Extra large devices (large desktops, 1400px and up)
+        @media (min-width: 1400px) {
+            @content
+        }
+    }
+
+    @else if($width =="xxlarge") {
+
+        // Extra large devices (large desktops, 1920px and up)
+        @media (min-width: 1920px) {
+            @content
+        }
+    }
+}
+
+@function pxtorem($value) {
+    @return ($value / 18px)+rem;
+}
+
+$font-pd-medium: 'PlayfairDisplay-Medium';
+$font-pd-regular: 'PlayfairDisplay-Regular';
+$font-pd-semibold: 'PlayfairDisplay-SemiBold';
+/*$font-pd-semibold: 'PlayfairDisplay-SemiBold', sans-serif;*/
+$font-rubik-medium: 'Rubik-Medium';
+$font-rubik-regular: 'Rubik-Regular';
+
+// Font Boyutları
+$font-size-s: pxtorem(14px);
+$font-size-xs: pxtorem(16px);
+$font-size-xxs: pxtorem(18px);
+$font-size-m: pxtorem(20px);
+$font-size-xm: pxtorem(24px);
+$font-size-xxm: pxtorem(28px);
+$font-size-l: pxtorem(32px);
+$font-size-xl: pxtorem(36px);
+$font-size-xxl: pxtorem(40px);
+$font-size-xxxl: pxtorem(48px);
+
+
+
+// Renkler 
+$primary-color: #FF7757;
+$primary-color-50: #FFE4DD;
+$primary-color-100: #FFD2C7;
+$primary-color-200: #FFBBAB;
+$primary-color-300: #FFA48F;
+$primary-color-400: #FF8E73;
+
+
+$secondary-color: #331811;
+$secondary-color-100: #D46349;
+$secondary-color-200: #AA4F3A;
+$secondary-color-300: #803C2C;
+$secondary-color-400: #55281D;
+
+$light-color: #ffffff;
+$dark-color: #000000;
+$dark-color-light: #172432;
+$gray-color: #767E86;
+$gray-color-light: #F5F6F7;
+$yellow-color: #FFC107;
+
+// GENEL KODLAR
+body,
+html {
+    font-family: $font-rubik-regular !important;
+    //line-height: 1.4;
+    font-size: 18px !important;
+}
+
+.rubik-regular {
+    font-family: $font-rubik-regular;
+}
+
+.top-25 {
+    top: 25%;
+}
+
+.top-20 {
+    top: 20%;
+}
+
+.top-30 {
+    top: 30%;
+}
+
+.top-35 {
+    top: 35%;
+}
+
+.top-40 {
+    top: 40%;
+}
+
+.w-10 {
+    width: 10px !important;
+}
+
+.w-20 {
+    width: 20px !important;
+}
+
+.left-unset {
+    left: unset;
+}

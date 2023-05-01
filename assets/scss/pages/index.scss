@@ -1,0 +1,1395 @@
+.header {
+    height: pxtorem(1210px);
+
+    @include mq('tablet') {
+        height: pxtorem(790px);
+    }
+
+    @include mq('large') {
+        height: pxtorem(900px);
+    }
+
+    @include mq('xxlarge') {
+        height: pxtorem(1100px);
+    }
+
+    // NAVBAR
+    .navbar {
+        @include mq('desktop') {
+            height: pxtorem(128px);
+        }
+
+        .container-fluid {
+            @include mq('large') {
+                padding-left: pxtorem(32px);
+                padding-right: pxtorem(32px);
+            }
+
+            @include mq('xxlarge') {
+                padding-left: pxtorem(180px);
+                padding-right: pxtorem(180px);
+            }
+        }
+
+        .navbar-nav {
+            @include mq('desktop') {
+                column-gap: 1.8rem;
+            }
+
+            .nav-item {
+                .nav-link {
+                    font-size: $font-size-m;
+                    border-bottom: 3px solid transparent;
+
+                    @include mq('desktop') {
+                        padding-left: 0 !important;
+                        padding-right: 0;
+                        padding-top: 0;
+                        padding-bottom: 0;
+
+                        &:hover {
+
+                            border-bottom: 3px solid $primary-color;
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        .login-screen {
+            a {
+                font-size: $font-size-m;
+            }
+        }
+    }
+
+    .navbar-brand {
+        img {
+            height: pxtorem(30px);
+
+            @include mq('tablet') {
+                height: pxtorem(46px);
+            }
+        }
+    }
+
+    .navbar-toggler {
+        span {
+            &:hover {
+                cursor: pointer;
+            }
+
+            i {
+                font-size: $font-size-xxm;
+            }
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .login-screen,
+    .navbar-collapse {
+        background: #000;
+
+        @include mq('desktop') {
+            background: transparent;
+        }
+
+        .signup-btn {
+            background-color: $primary-color !important;
+            font-family: $font-rubik-regular;
+        }
+    }
+
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                font-family: $font-rubik-regular;
+            }
+        }
+    }
+
+
+
+    // CAROUSEL
+    .carousel-item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: pxtorem(1210px);
+
+        @include mq('tablet') {
+            height: pxtorem(790px);
+        }
+
+        @include mq('large') {
+            height: pxtorem(900px);
+        }
+
+        @include mq('xxlarge') {
+            height: pxtorem(1100px);
+        }
+
+        .carousel-caption {
+            --bs-gutter-x: 1.5rem;
+            left: calc(var(--bs-gutter-x) * .5);
+            right: 0;
+            top: 12%;
+            width: 85%;
+            height: max-content;
+
+            @include mq('small') {
+                top: 20%;
+                width: 70%;
+            }
+
+            @include mq('large') {
+                left: pxtorem(32px);
+                width: 60%;
+                top: 25%;
+            }
+
+            @include mq('xxlarge') {
+                left: pxtorem(180px);
+            }
+
+
+            h5 {
+                line-height: pxtorem(50px);
+                font-family: $font-pd-regular;
+                font-size: $font-size-xxl !important;
+
+                @include mq('tablet') {
+                    line-height: pxtorem(60px);
+                    font-size: pxtorem(54px) !important;
+                }
+
+                @include mq('large') {
+                    line-height: pxtorem(60px);
+                    font-size: pxtorem(64px) !important;
+                }
+
+                @include mq('large') {
+                    line-height: pxtorem(80px);
+                    font-size: pxtorem(84px) !important;
+                }
+            }
+
+            p {
+
+                @include mq('tablet') {
+                    font-size: $font-size-m;
+                }
+
+                @include mq('large') {
+                    font-size: $font-size-xm;
+                }
+            }
+        }
+    }
+
+    .carousel-indicators {
+        --bs-gutter-x: 1.5rem;
+        width: max-content;
+        height: max-content;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+        right: calc(var(--bs-gutter-x) * .5);
+        left: unset;
+        //top: 23%;
+        top: 14%;
+
+        @include mq('small') {
+            top: 20%;
+        }
+
+        @include mq('tablet') {
+            top: 23%;
+        }
+
+        @include mq('xxlarge') {
+            right: pxtorem(180px);
+        }
+
+        [data-bs-target] {
+            border-radius: 50%;
+            height: pxtorem(16px);
+            width: pxtorem(16px);
+            opacity: 1;
+
+            &.active {
+                background-color: $primary-color;
+            }
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        --bs-gutter-x: 1.5rem;
+        width: 20px;
+        height: 20px;
+        opacity: 1;
+        right: calc(var(--bs-gutter-x) * .5);
+        left: unset;
+
+        @include mq('xxlarge') {
+            right: pxtorem(180px);
+        }
+    }
+
+    .carousel-control-prev {
+        top: 27%;
+
+        @include mq('small') {
+            top: 33%;
+        }
+
+        @include mq('tablet') {
+            top: 41%;
+        }
+
+        &-icon {
+            transform: rotate(90deg);
+        }
+    }
+
+    .carousel-control-next {
+        top: 29%;
+
+        @include mq('small') {
+            top: 35%;
+        }
+
+        @include mq('tablet') {
+            top: 43%;
+        }
+
+        &-icon {
+            transform: rotate(90deg);
+        }
+    }
+
+    // FORM
+    .dest-form {
+        --bs-gutter-x: 1.5rem;
+        position: absolute;
+        top: 75%;
+        background-color: $light-color;
+        margin-right: calc(var(--bs-gutter-x) * .5);
+        margin-left: calc(var(--bs-gutter-x) * .5);
+        border-radius: 16px;
+        padding-top: 20px;
+
+        @include mq('small') {
+            top: 100%;
+        }
+
+        @include mq('tablet') {
+            width: 80%;
+            margin-right: 0;
+            margin-left: 0;
+            top: 70%;
+            padding-top: 0;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        @include mq('desktop') {
+            width: 78%;
+        }
+
+        @include mq('large') {
+            padding-left: pxtorem(32px);
+            top: 80%;
+        }
+
+        @include mq('xlarge') {
+            padding-left: pxtorem(32px);
+            top: 60%;
+        }
+
+
+        @include mq('xxlarge') {
+            top: 75%;
+            padding-left: pxtorem(170px);
+        }
+
+        .container-fluid {}
+
+
+        label {
+            text-transform: uppercase;
+            color: $gray-color;
+            font-size: $font-size-xs;
+            font-weight: 500;
+        }
+
+        input,
+        select {
+            border: none;
+            border-radius: 0;
+            padding-left: 0;
+            border-bottom: 1px solid $dark-color;
+            color: $dark-color-light;
+            font-family: $font-pd-regular;
+            font-size: $font-size-xs;
+
+            &:focus {
+                outline: 0;
+                box-shadow: none;
+                //border: 0;
+            }
+        }
+
+        #destination {
+            &::placeholder {
+                color: $dark-color-light;
+            }
+        }
+
+        #checkin,
+        #checkout {
+            &::-webkit-calendar-picker-indicator {
+                //appearance: none;
+                /*
+                --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+                background-image: var(--bs-form-select-bg-img);
+                */
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+                background-repeat: no-repeat;
+                background-position: right center;
+                background-size: 16px 12px;
+            }
+        }
+
+        button {
+            font-size: $font-size-xl;
+            font-family: $font-pd-regular;
+            border-radius: 0;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+            background-color: $primary-color;
+            border: 1px solid $primary-color;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+
+            &:active {
+                background-color: $primary-color;
+                border: 1px solid $primary-color;
+            }
+
+            @include mq('tablet') {
+                border-radius: 0;
+                border-top-right-radius: 16px;
+                border-bottom-right-radius: 16px;
+                //height: 163px;
+            }
+
+            @include mq('xlarge') {
+                padding-top: 2.5rem;
+                padding-bottom: 2.5rem;
+            }
+        }
+
+
+
+
+    }
+}
+
+.destinations {
+    padding-top: pxtorem(80px);
+    padding-bottom: pxtorem(80px);
+
+    @include mq('xlarge') {
+        padding-top: pxtorem(140px);
+        padding-bottom: pxtorem(140px);
+    }
+
+    .container-fluid {
+        @include mq('large') {
+            padding-left: pxtorem(32px);
+            padding-right: pxtorem(32px);
+        }
+
+        @include mq('xxlarge') {
+            padding-left: pxtorem(180px);
+            padding-right: pxtorem(180px);
+        }
+    }
+
+    &-title {
+        margin-bottom: pxtorem(100px);
+
+        h5 {
+            width: 80%;
+            font-family: $font-pd-regular;
+            font-size: $font-size-xxl;
+
+
+            @include mq('tablet') {
+                font-size: pxtorem(54px);
+            }
+
+            @include mq('large') {
+                font-size: pxtorem(64px);
+            }
+
+            &::after {
+                content: " ";
+                display: block;
+                width: 70%;
+                height: 3px;
+                margin-top: pxtorem(10px);
+                background-color: $primary-color;
+
+                @include mq('large') {
+                    width: 40%;
+                }
+            }
+        }
+
+        p {
+            color: $gray-color;
+
+            @include mq('tablet') {
+                font-size: pxtorem(20px);
+            }
+
+            @include mq('desktop') {
+                width: 70%;
+            }
+
+            @include mq('large') {
+                font-size: pxtorem(24px);
+            }
+        }
+    }
+
+    .card {
+        //max-width: 497px;
+
+        &.text-bg-dark {
+            background-color: transparent !important;
+        }
+
+        &-img-overlay {
+            top: initial;
+
+            .card-title {}
+
+            .card-text {
+                i {
+                    margin-right: pxtorem(16px);
+                }
+            }
+        }
+
+    }
+
+    .owl-nav {
+        @include mq('desktop') {
+            position: absolute;
+            right: 2%;
+            top: -25%;
+        }
+
+        .owl-prev,
+        .owl-next {
+            background-color: $primary-color !important;
+            width: pxtorem(40px);
+            height: pxtorem(40px);
+
+            span {
+                color: $light-color;
+                font-size: $font-size-xxm;
+            }
+        }
+
+        .owl-prev.disabled,
+        .owl-next.disabled {
+            background-color: $dark-color-light !important;
+            opacity: 1;
+        }
+
+        .owl-next {
+            margin-left: pxtorem(30px);
+        }
+    }
+}
+
+.offer {
+    padding-top: pxtorem(80px);
+    padding-bottom: pxtorem(80px);
+
+    @include mq('xlarge') {
+        padding-top: pxtorem(140px);
+        padding-bottom: pxtorem(140px);
+    }
+
+    .container-fluid {
+        @include mq('large') {
+            padding-left: pxtorem(32px);
+            padding-right: pxtorem(32px);
+        }
+
+        @include mq('xxlarge') {
+            padding-left: pxtorem(180px);
+            padding-right: pxtorem(180px);
+        }
+    }
+
+    &-title {
+        margin-bottom: pxtorem(100px);
+
+        h5 {
+            width: 100%;
+            font-family: $font-pd-regular;
+            font-size: $font-size-xxl;
+
+            @include mq('small') {}
+
+            @include mq('tablet') {
+                font-size: pxtorem(54px);
+            }
+
+            @include mq('large') {
+                font-size: pxtorem(64px);
+            }
+
+            &::after {
+                content: " ";
+                display: block;
+                width: 70%;
+                height: 3px;
+                margin-top: pxtorem(10px);
+                background-color: $primary-color;
+
+                @include mq('small') {
+                    --bs-gutter-x: 1.5rem;
+                    position: absolute;
+                    right: calc(var(--bs-gutter-x) * .5);
+                    width: 50%;
+                }
+
+                @include mq('large') {
+                    width: 40%;
+                }
+
+                @include mq('xxlarge') {
+                    right: pxtorem(180px);
+                    width: 10%;
+                }
+            }
+        }
+
+        p {
+            color: $gray-color;
+
+            @include mq('small') {
+                margin-top: pxtorem(32px);
+            }
+
+            @include mq('tablet') {
+                font-size: pxtorem(20px);
+            }
+
+            @include mq('desktop') {}
+
+            @include mq('large') {
+                font-size: pxtorem(24px);
+            }
+        }
+    }
+
+    .card {
+        background: #FFF8F1;
+        border-radius: 26px;
+
+        &-body {
+
+            .card-title {
+                color: $gray-color;
+                font-size: $font-size-xxm;
+            }
+
+            .stars {
+                i {
+                    color: $yellow-color;
+                }
+            }
+
+            .card-text {
+                margin-top: pxtorem(24px);
+                color: $dark-color-light;
+                font-weight: 400;
+                line-height: 21px;
+            }
+
+            .card-bottom {
+                color: $gray-color;
+
+                span {
+                    color: $primary-color;
+                    font-size: $font-size-xl;
+                    margin-left: pxtorem(10px);
+                }
+
+                a {
+                    background-color: $primary-color;
+                    text-transform: uppercase;
+                    border-color: $primary-color;
+                    font-size: $font-size-m;
+                }
+            }
+        }
+
+    }
+
+    .owl-nav {
+        @include mq('desktop') {
+            position: absolute;
+            left: 2%;
+            top: -42%;
+        }
+
+        .owl-prev,
+        .owl-next {
+            background-color: $primary-color !important;
+            width: pxtorem(40px);
+            height: pxtorem(40px);
+
+            span {
+                color: $light-color;
+                font-size: $font-size-xxm;
+            }
+        }
+
+        .owl-prev.disabled,
+        .owl-next.disabled {
+            background-color: $dark-color-light !important;
+            opacity: 1;
+        }
+
+        .owl-next {
+            margin-left: pxtorem(30px);
+        }
+    }
+}
+
+.blog {
+    padding-top: pxtorem(80px);
+    padding-bottom: pxtorem(80px);
+
+    @include mq('xlarge') {
+        padding-top: pxtorem(140px);
+        padding-bottom: pxtorem(140px);
+    }
+
+    .container-fluid {
+        @include mq('large') {
+            padding-left: pxtorem(32px);
+            padding-right: pxtorem(32px);
+        }
+
+        @include mq('xxlarge') {
+            padding-left: pxtorem(180px);
+            padding-right: pxtorem(180px);
+        }
+    }
+
+    &-title {
+        margin-bottom: pxtorem(100px);
+
+        h5 {
+            width: 80%;
+            font-family: $font-pd-regular;
+            font-size: $font-size-xxl;
+
+            @include mq('tablet') {
+                font-size: pxtorem(54px);
+            }
+
+            @include mq('large') {
+                font-size: pxtorem(64px);
+            }
+
+            &::after {
+                content: " ";
+                display: block;
+                width: 70%;
+                height: 3px;
+                margin-top: pxtorem(10px);
+                background-color: $primary-color;
+
+                @include mq('large') {
+                    width: 40%;
+                }
+            }
+        }
+
+        p {
+            color: $gray-color;
+
+            @include mq('tablet') {
+                font-size: pxtorem(20px);
+            }
+
+            @include mq('large') {
+                font-size: pxtorem(24px);
+            }
+        }
+    }
+
+    .card {
+        border: none;
+
+        &-body {
+            padding-left: 0;
+            color: $dark-color-light;
+
+            @include mq('tablet') {
+                padding-left: 1rem;
+            }
+
+            @include mq('tablet') {}
+
+            .card-title {
+                font-size: $font-size-xxl;
+                font-family: $font-pd-regular;
+            }
+
+            .card-text {
+
+                @include mq('desktop') {
+                    line-height: 32px;
+                }
+
+                @include mq('large') {
+                    line-height: 52px;
+                }
+            }
+
+            a {
+                color: $primary-color;
+                font-size: $font-size-xm;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .card-bottom {
+                color: $gray-color;
+
+                span {
+                    color: $primary-color;
+                    font-size: $font-size-xl;
+                    margin-left: pxtorem(10px);
+                }
+
+                a {
+                    background-color: $primary-color;
+                    text-transform: uppercase;
+                    border-color: $primary-color;
+                    font-size: $font-size-m;
+                }
+            }
+        }
+
+    }
+}
+
+.trip {
+    padding-top: pxtorem(80px);
+    padding-bottom: pxtorem(80px);
+
+    @include mq('xlarge') {
+        padding-top: pxtorem(140px);
+        padding-bottom: pxtorem(140px);
+    }
+
+    .container-fluid {
+        @include mq('large') {
+            padding-left: pxtorem(32px);
+            padding-right: pxtorem(32px);
+        }
+
+        @include mq('xxlarge') {
+            padding-left: pxtorem(180px);
+            padding-right: pxtorem(180px);
+        }
+    }
+
+
+    &-title {
+
+        @include mq('desktop') {
+            padding-top: pxtorem(100px);
+        }
+
+        h5 {
+            width: 80%;
+            font-family: $font-pd-regular;
+            font-size: $font-size-xxl;
+
+            @include mq('tablet') {
+                font-size: pxtorem(54px);
+            }
+
+            @include mq('large') {
+                font-size: pxtorem(64px);
+            }
+
+            &::after {
+                content: " ";
+                display: block;
+                width: 25%;
+                height: 3px;
+                margin-top: pxtorem(10px);
+                background-color: $primary-color;
+
+                @include mq('large') {
+                    width: 25%;
+                }
+            }
+        }
+
+        p {
+            color: $gray-color;
+
+            @include mq('tablet') {
+                font-size: pxtorem(20px);
+            }
+
+            @include mq('large') {
+                font-size: pxtorem(24px);
+            }
+        }
+
+        a {
+            position: relative;
+            background-color: $primary-color;
+            border-color: $primary-color;
+            margin-left: 10px;
+            margin-top: 1rem;
+
+            &:hover {
+                background-color: $primary-color;
+                border-color: $primary-color;
+            }
+
+            &.btn:active {
+                background-color: $primary-color;
+                border-color: $primary-color;
+            }
+
+            &::before {
+                content: " ";
+                display: block;
+                width: pxtorem(43px);
+                height: pxtorem(43px);
+                background-color: $dark-color-light;
+                z-index: -1;
+                position: absolute;
+                top: -35%;
+                left: -10%;
+            }
+
+            &::after {
+                content: " ";
+                display: block;
+                width: pxtorem(43px);
+                height: pxtorem(43px);
+                background-color: $gray-color;
+                z-index: -1;
+                position: absolute;
+                bottom: -35%;
+                right: -10%;
+            }
+        }
+    }
+
+    .card {
+        border: none;
+        color: $dark-color-light;
+        cursor: pointer;
+
+
+
+        &:hover>.card-body {
+            @include mq('desktop') {
+                display: block;
+            }
+
+        }
+
+        &-body {
+            padding-left: 0;
+            padding-right: 0;
+            color: $dark-color-light;
+            transition: opacity 500ms;
+
+            @include mq('tablet') {}
+
+            @include mq('desktop') {
+                display: none;
+            }
+
+            .card-category {
+                font-weight: 400;
+                text-transform: uppercase;
+                font-size: $font-size-s;
+
+                .price {
+                    text-transform: initial;
+                }
+            }
+
+            .card-title {
+                font-weight: 600;
+                font-family: $font-pd-semibold;
+                font-size: $font-size-xm;
+            }
+
+            .card-bottom {
+                .stars {
+                    i {
+                        color: $yellow-color;
+                    }
+                }
+
+                .card-day {}
+            }
+        }
+
+    }
+
+    .owl-nav {
+        @include mq('desktop') {}
+
+        .owl-prev,
+        .owl-next {
+            background-color: $primary-color !important;
+            width: pxtorem(40px);
+            height: pxtorem(40px);
+
+            span {
+                color: $light-color;
+                font-size: $font-size-xxm;
+            }
+        }
+
+        .owl-prev.disabled,
+        .owl-next.disabled {
+            background-color: $dark-color-light !important;
+            opacity: 1;
+        }
+
+        .owl-next {
+            margin-left: pxtorem(30px);
+        }
+    }
+}
+
+.gallery {
+    padding-top: pxtorem(80px);
+    padding-bottom: pxtorem(80px);
+
+    @include mq('xlarge') {
+        padding-top: pxtorem(140px);
+        padding-bottom: pxtorem(140px);
+    }
+
+    .container-fluid {
+        @include mq('large') {
+            padding-left: pxtorem(32px);
+            padding-right: pxtorem(32px);
+        }
+
+        @include mq('xxlarge') {
+            padding-left: pxtorem(180px);
+            padding-right: pxtorem(180px);
+        }
+    }
+
+    &-title {
+
+        h5 {
+            width: 80%;
+            font-family: $font-pd-regular;
+            font-size: $font-size-xxl;
+
+            @include mq('tablet') {
+                font-size: pxtorem(54px);
+            }
+
+            @include mq('large') {
+                font-size: pxtorem(64px);
+            }
+
+            &::after {
+                content: " ";
+                display: block;
+                width: 70%;
+                height: 3px;
+                margin-top: pxtorem(10px);
+                background-color: $primary-color;
+
+                @include mq('large') {
+                    width: 40%;
+                }
+            }
+        }
+
+        p {
+            color: $gray-color;
+
+            @include mq('tablet') {
+                font-size: pxtorem(20px);
+            }
+
+            @include mq('large') {
+                font-size: pxtorem(24px);
+            }
+        }
+    }
+
+    .owl-nav {
+        @include mq('desktop') {
+            position: absolute;
+            right: 2%;
+            top: -50%;
+        }
+
+        .owl-prev,
+        .owl-next {
+            background-color: $primary-color !important;
+            width: pxtorem(40px);
+            height: pxtorem(40px);
+
+            span {
+                color: $light-color;
+                font-size: $font-size-xxm;
+            }
+        }
+
+        .owl-prev.disabled,
+        .owl-next.disabled {
+            background-color: $dark-color-light !important;
+            opacity: 1;
+        }
+
+        .owl-next {
+            margin-left: pxtorem(30px);
+        }
+    }
+}
+
+.comments {
+    padding-top: pxtorem(80px);
+
+    @include mq('xlarge') {
+        padding-top: pxtorem(140px);
+    }
+
+    .container-fluid {
+        @include mq('large') {
+            padding-left: pxtorem(32px);
+            padding-right: pxtorem(32px);
+        }
+
+        @include mq('xxlarge') {
+            padding-left: pxtorem(180px);
+            padding-right: pxtorem(180px);
+        }
+    }
+
+    &-title {
+
+        @include mq('desktop') {
+            padding-top: pxtorem(100px);
+        }
+
+        h5 {
+            width: 80%;
+            font-family: $font-pd-regular;
+            font-size: $font-size-xxl;
+
+            @include mq('tablet') {
+                font-size: pxtorem(54px);
+            }
+
+            @include mq('large') {
+                font-size: pxtorem(64px);
+            }
+
+            &::after {
+                content: " ";
+                display: block;
+                width: 25%;
+                height: 3px;
+                margin-top: pxtorem(10px);
+                background-color: $primary-color;
+
+                @include mq('large') {
+                    width: 25%;
+                }
+            }
+        }
+
+        p {
+            color: $gray-color;
+
+            @include mq('tablet') {
+                font-size: pxtorem(20px);
+            }
+
+            @include mq('large') {
+                font-size: pxtorem(24px);
+            }
+        }
+
+
+    }
+
+
+
+
+
+    .card {
+        position: relative;
+        border: none;
+        background-color: $gray-color-light;
+        padding: pxtorem(40px);
+        margin-top: pxtorem(70px);
+
+
+        img {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: -65px;
+            left: 40px;
+        }
+
+        &-body {
+            padding-left: 0;
+            padding-right: 0;
+            color: $dark-color-light;
+            transition: opacity 500ms;
+
+            .card-text {
+                color: $gray-color;
+            }
+
+            .name {
+                font-family: $font-pd-regular;
+                font-size: $font-size-xm;
+                color: $gray-color;
+            }
+
+            .task {
+                color: $gray-color;
+            }
+
+            .stars {
+                i {
+                    color: $yellow-color;
+                }
+            }
+        }
+
+    }
+
+    .owl-carousel .owl-stage-outer {}
+
+    .owl-nav {
+        @include mq('desktop') {
+            position: absolute;
+            right: 2%;
+            top: -35%;
+        }
+
+        .owl-prev,
+        .owl-next {
+            background-color: $primary-color !important;
+            width: pxtorem(40px);
+            height: pxtorem(40px);
+
+            span {
+                color: $light-color;
+                font-size: $font-size-xxm;
+            }
+        }
+
+        .owl-prev.disabled,
+        .owl-next.disabled {
+            background-color: $dark-color-light !important;
+            opacity: 1;
+        }
+
+        .owl-next {
+            margin-left: pxtorem(30px);
+        }
+    }
+}
+
+.newsletter {
+    padding-top: pxtorem(80px);
+
+    @include mq('large') {
+        margin-top: pxtorem(100px);
+        position: relative;
+    }
+
+    @include mq('xlarge') {
+        padding-top: pxtorem(140px);
+    }
+
+    .container-fluid {
+        @include mq('large') {
+            padding-left: pxtorem(32px);
+            padding-right: pxtorem(32px);
+
+            position: absolute;
+            top: -25%;
+        }
+
+        @include mq('xlarge') {
+            padding-left: pxtorem(89px);
+            padding-right: pxtorem(89px);
+            top: 30%;
+        }
+
+        @include mq('xxlarge') {
+            padding-left: pxtorem(329px);
+            padding-right: pxtorem(329px);
+            top: 35%;
+        }
+    }
+
+    &-title {
+
+        @include mq('desktop') {}
+
+        h5 {
+            font-family: $font-pd-regular;
+            font-size: $font-size-xxl;
+            color: $gray-color;
+
+            @include mq('tablet') {
+                font-size: pxtorem(54px);
+            }
+
+            @include mq('large') {
+                font-size: pxtorem(64px);
+            }
+
+
+        }
+    }
+
+    form {
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+
+        background-color: $light-color;
+        padding: 40px;
+
+        label {
+            color: $gray-color;
+        }
+
+        input {
+            background-color: #FFE8D4;
+            color: $primary-color;
+            border: none;
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+
+            &:focus {
+                background-color: #FFE8D4;
+                border: none;
+                box-shadow: none;
+                color: $primary-color;
+            }
+
+            &::placeholder {
+                color: $primary-color;
+            }
+        }
+
+        button {
+            background-color: $primary-color;
+            border-color: $primary-color;
+
+            &:hover {
+                background-color: $primary-color;
+                border-color: $primary-color;
+            }
+
+            &.btn:active {
+                background-color: $primary-color;
+                border-color: $primary-color;
+            }
+        }
+    }
+
+}
+
+footer {
+    padding-top: pxtorem(80px);
+    padding-bottom: pxtorem(80px);
+    background-color: $dark-color-light;
+    color: $light-color;
+
+    @include mq('large') {
+        padding-top: pxtorem(240px);
+        padding-bottom: pxtorem(140px);
+    }
+
+    @include mq('xlarge') {
+        //padding-top: pxtorem(240px);
+        padding-bottom: pxtorem(140px);
+    }
+
+    .container-fluid {
+        @include mq('large') {
+            padding-left: pxtorem(32px);
+            padding-right: pxtorem(32px);
+        }
+
+        @include mq('xxlarge') {
+            padding-left: pxtorem(180px);
+            padding-right: pxtorem(180px);
+        }
+    }
+
+    h5 {
+        font-family: $font-rubik-medium;
+        font-size: $font-size-xxm;
+    }
+
+    .navbar-nav {
+        width: min-content;
+
+        .nav-item {
+            line-height: 12px;
+        }
+    }
+
+    .row {
+        column-gap: 6rem !important;
+    }
+
+    .col-12 {
+        width: max-content;
+    }
+
+
+}
